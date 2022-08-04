@@ -12,14 +12,13 @@ const Posts = () => {
     },[])
 
     return (
-        <div>
+        <div  style={{backgroudColor:'yellow'}}>
             <h1>Every posts facebook ever had : {posts.length}</h1>
             {
                 posts.map(post =><Link
                     key={post.id}
-                    to={`/post/${post.id}`}
-                    >{post.id}
-                    </Link>)
+                    to={`/posts/${post.id}`}
+                    >{post.id}</Link>)
             }
             <Outlet></Outlet>
         </div>
